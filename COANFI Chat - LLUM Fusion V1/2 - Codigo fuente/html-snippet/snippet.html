@@ -1,0 +1,35 @@
+<!--
+============================================================
+COANFI CHAT — Snippet listo para pegar antes de </body>
+------------------------------------------------------------
+Esta versión viene YA PRECONFIGURADA con los webhooks de
+producción de COANFI. No necesitas cambiar nada de la
+configuración salvo, si acaso, la ruta de los archivos
+(coanfi-chat.js y kasia-avatar.jpg) según dónde los hayas
+subido en tu servidor.
+
+Rutas asumidas por defecto:
+  - /js/coanfi-chat.js
+  - /img/kasia-avatar.png     (avatar de KasIA, junto a cada mensaje)
+  - /img/coanfi-isotipo.jpg   (isotipo de Coanfi, en la cabecera del chat)
+============================================================
+-->
+<script>
+    window.COANFI_CHAT_CONFIG = {
+        WEBHOOK_URL: "https://n8n-automation-u76494.vm.elestio.app/webhook/chat-velvet",
+        FEEDBACK_URL: "https://n8n-automation-u76494.vm.elestio.app/webhook/feedback",
+        EVENT_URL: "https://n8n-automation-u76494.vm.elestio.app/webhook/event",
+        ASSISTANT_NAME: "KasIA",
+        ASSISTANT_AVATAR: "/img/kasia-avatar.png",
+        LOGO_URL: "/img/coanfi-isotipo.jpg",
+        BRAND_COLOR: "#1E5BFF",
+        BRAND_COLOR_DARK: "#1646C7",
+        PRIVACY_URL: "https://www.coanfi.com/politica-privacidad/",
+        WELCOME: "Hola, soy KasIA, tu asistente inmobiliario, ¿Necesitas ayuda?",
+        TOOLTIP_TEXT: "Hola, soy KasIA, tu asistente inmobiliario, ¿Necesitas ayuda?",
+        CONSENT_TEXT: "Antes de empezar, necesito que aceptes nuestra política de privacidad.",
+        ASK_NAME_TEXT: "¡Gracias! ¿Cómo te llamas?",
+        CLOSE_TEXT: "Gracias por agendar una cita con nosotros. Si necesitas algo más, puedes escribirnos de nuevo cuando lo desees."
+    };
+</script>
+<script src="/js/coanfi-chat.js?v=902"></script>

@@ -1,0 +1,34 @@
+KasIA · LLUM Fusión — Instrucciones de instalación
+===================================================
+
+FASE 1 · Página del QR (móvil) y tablet del stand
+-------------------------------------------------
+1. Sube a la RAÍZ de www.llumfusion.com, uno al lado del otro:
+      kasia.html
+      kasia/          (carpeta: coanfi-chat.js, kasia-avatar.png, coanfi-isotipo.jpg)
+2. Comprueba que abren:
+      https://www.llumfusion.com/kasia.html
+      https://www.llumfusion.com/kasia/coanfi-chat.js
+3. Direcciones de uso:
+      Móvil (la del QR):   https://www.llumfusion.com/kasia.html
+      Tablet del stand:    https://www.llumfusion.com/kasia.html?quiosco=1
+
+   En la tablet del stand:
+   - Aparece el botón "Nueva conversación" arriba a la derecha.
+   - Tras 3 minutos sin actividad, el chat avisa y se borra solo, para que el
+     siguiente visitante no vea el nombre ni el email del anterior.
+   - Cada visitante vuelve a aceptar la política de privacidad.
+   - Recomendado: guardar la dirección como acceso directo en la pantalla de
+     inicio y activar el "acceso guiado" (iPad) o "fijar pantalla" (Android).
+
+La página no se indexa en buscadores (noindex) y debe servirse por https.
+
+FASE 2 · Burbuja en la landing de LLUM Fusión
+---------------------------------------------
+1. Pega el contenido de snippet-burbuja.html justo antes de </body> en las
+   páginas de la landing. Usa los mismos archivos de /kasia/: no hay que subir
+   nada más.
+2. No instalar en la misma página que el chat de Arquerías Velvet.
+
+Cada vez que se entregue una versión nueva del chat, cambia el número ?v= del
+script para que los navegadores no usen la versión anterior guardada.

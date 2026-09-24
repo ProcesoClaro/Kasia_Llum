@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo · COANFI Chat</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            max-width: 720px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #333;
+            line-height: 1.5;
+        }
+        h1 { color: #1E5BFF; }
+        code {
+            background: #f4f4f6;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Página de prueba</h1>
+    <p>
+        Esta página de ejemplo carga el widget <strong>COANFI Chat</strong> en la esquina
+        inferior derecha. Ya viene configurado contra los webhooks de producción,
+        por lo que puedes probar una conversación real con KasIA abriendo este
+        archivo en el navegador.
+    </p>
+    <p>
+        Para instalar el widget en tu web, sólo tienes que copiar el bloque de dos
+        etiquetas <code>&lt;script&gt;</code> que aparece más abajo (o el contenido
+        del archivo <code>snippet.html</code>) y pegarlo justo antes de la etiqueta
+        <code>&lt;/body&gt;</code> de tus páginas HTML.
+    </p>
+
+    <!--
+    ============================================================
+    INICIO DEL WIDGET COANFI CHAT — Snippet preconfigurado
+    ============================================================
+    -->
+    <script>
+        window.COANFI_CHAT_CONFIG = {
+            WEBHOOK_URL: "https://n8n-automation-u76494.vm.elestio.app/webhook/chat-velvet",
+            FEEDBACK_URL: "https://n8n-automation-u76494.vm.elestio.app/webhook/feedback",
+            EVENT_URL: "https://n8n-automation-u76494.vm.elestio.app/webhook/event",
+            ASSISTANT_NAME: "KasIA",
+            ASSISTANT_AVATAR: "kasia-avatar.png",
+            LOGO_URL: "coanfi-isotipo.jpg",
+            BRAND_COLOR: "#1E5BFF",
+            BRAND_COLOR_DARK: "#1646C7",
+            PRIVACY_URL: "https://www.coanfi.com/politica-privacidad/",
+            WELCOME: "Hola, soy KasIA, tu asistente inmobiliario, ¿Necesitas ayuda?",
+            TOOLTIP_TEXT: "Hola, soy KasIA, tu asistente inmobiliario, ¿Necesitas ayuda?",
+            CONSENT_TEXT: "Antes de empezar, necesito que aceptes nuestra política de privacidad.",
+            ASK_NAME_TEXT: "¡Gracias! ¿Cómo te llamas?",
+            CLOSE_TEXT: "Gracias por agendar una cita con nosotros. Si necesitas algo más, puedes escribirnos de nuevo cuando lo desees."
+        };
+    </script>
+    <script src="coanfi-chat.js"></script>
+    <!--
+    ============================================================
+    FIN DEL WIDGET
+    ============================================================
+    -->
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo burbuja · KasIA LLUM Fusión</title>
+    <style>
+        body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.5; }
+        h1 { color: #1E5BFF; }
+    </style>
+</head>
+<body>
+    <h1>LLUM Fusión · página de prueba</h1>
+    <p>Simula la landing de la promoción con KasIA en formato burbuja (fase 2). Abre la burbuja de abajo a la derecha.</p>
+<script>
+    window.COANFI_CHAT_CONFIG = {
+        WEBHOOK_URL: "https://n8n-automation-u76494.vm.elestio.app/webhook/chat-llum",
+        FEEDBACK_URL: "https://n8n-automation-u76494.vm.elestio.app/webhook/feedback",
+        EVENT_URL: "https://n8n-automation-u76494.vm.elestio.app/webhook/event",
+        DISPLAY_MODE: "bubble",
+        PROMOCION: "llum-fusion",
+        ASSISTANT_NAME: "KasIA",
+        ASSISTANT_AVATAR: "kasia/kasia-avatar.png",
+        LOGO_URL: "kasia/coanfi-isotipo.jpg",
+        HEADER_SUBTITLE: "LLUM Fusión · Sagunto",
+        BRAND_COLOR: "#1E5BFF",
+        BRAND_COLOR_DARK: "#1646C7",
+        PRIVACY_URL: "https://www.coanfi.com/politica-privacidad/",
+        WELCOME: "Hola, soy KasIA, la asistente virtual de LLUM Fusión 😊 Te cuento todo sobre las nuevas viviendas de protección pública en Sagunto.",
+        TOOLTIP_TEXT: "Hola, soy KasIA 😊 ¿Te cuento todo sobre LLUM Fusión?",
+        CONSENT_TEXT: "Antes de empezar, necesito que aceptes nuestra política de privacidad.",
+        ASK_NAME_TEXT: "¡Gracias! ¿Cómo te llamas?",
+        CLOSE_TEXT: "Gracias por tu interés en LLUM Fusión. Si necesitas algo más, puedes escribirnos de nuevo cuando lo desees."
+    };
+</script>
+<script src="kasia/coanfi-chat.js?v=1000"></script>
+</body>
+</html>

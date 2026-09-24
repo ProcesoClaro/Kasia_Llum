@@ -1,0 +1,46 @@
+COANFI CHAT — LLUM FUSIÓN V1 (24/09/2026)
+=========================================
+Widget 10.0.0 · Plugin WordPress 4.1.0 · Parte de "VERSION FINAL V2"
+(el chat de Arquerías Velvet sigue en la V2 y NO cambia).
+
+Qué es nuevo (todo opcional; sin estas claves el widget funciona igual que 9.0.2):
+  - DISPLAY_MODE "fullscreen": el chat ocupa toda la pantalla y se abre solo,
+    sin burbuja (enlace del QR). También por URL: ?modo=pantalla
+  - KIOSK (o ?quiosco=1): botón "Nueva conversación" y reinicio automático
+    tras KIOSK_IDLE_SECONDS (180 s) sin actividad, con aviso KIOSK_WARNING_SECONDS
+    (20 s) antes. El reinicio borra la pantalla, revoca el consentimiento y
+    genera un sessionId nuevo; una respuesta que llegue tarde se descarta.
+  - PROMOCION ("llum-fusion"): se envía al webhook como `promocion` y separa
+    las claves de sessionStorage de cada promoción.
+  - HEADER_SUBTITLE: subtítulo de la cabecera ("LLUM Fusión · Sagunto").
+  - En pantalla completa: columna centrada de 760 px en tablet/ordenador,
+    zonas seguras (notch) y ajuste al teclado también en tablet.
+
+1 - Entrega al cliente/
+-----------------------
+  kasia-llumfusion-web.zip   -> FASE 1: kasia.html + carpeta kasia/ para la RAÍZ de www.llumfusion.com
+                                Móvil (QR):        https://www.llumfusion.com/kasia.html
+                                Tablet del stand:  https://www.llumfusion.com/kasia.html?quiosco=1
+  QR_KasIA_LLUM_Fusion.png/.svg -> QR de la dirección del móvil (corrección de errores alta, verificado)
+  kasia-llum-burbuja-fase2.zip  -> FASE 2: snippet de burbuja (usa los archivos de /kasia/)
+  INSTRUCCIONES.txt
+
+Webhook: https://n8n-automation-u76494.vm.elestio.app/webhook/chat-llum
+(workflow "KasiA LLUM Fusión V1.0" en n8n). feedback y event, los mismos que Velvet.
+
+2 - Codigo fuente/
+------------------
+  Copia de "VERSION FINAL V2/2 - Codigo fuente" con los cambios de 10.0.0 en:
+    widget/src/config.ts, widget/src/hooks/useChat.ts,
+    widget/src/components/chat/ChatWidget.tsx y ChatWindow.tsx
+  html-llum/   kasia.html (QR) + kasia/ (bundle e imágenes), snippet-burbuja.html,
+               demo-burbuja.html, INSTRUCCIONES.txt
+  Compilar:    bash build.sh  (y copiar plugin/coanfi-chat/assets/coanfi-chat.js a html-llum/kasia/)
+
+Comprobado:
+  - Compilando la V2 sin cambios con este entorno sale un bundle idéntico byte a
+    byte al entregado (build reproducible).
+  - tsc sin errores.
+  - Pruebas en Chromium (móvil iPhone 13, iPad en modo quiosco, ordenador 1440 px
+    y burbuja en escritorio y móvil) contra la lógica real del workflow de LLUM:
+    33/33 comprobaciones OK.
